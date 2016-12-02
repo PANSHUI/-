@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/psh.ico" type="image/x-icon" ／>
+    <title>小新和巴卫的写真集</title>
+    <style>
+
+        .imgBoxBa{
+            margin-left: 200px;
+            margin-top: 100px;
+            width: 517px;
+            height: 646px;
+            position: absolute;
+        }
+
+        .imgBoxXiao{
+            margin-left: 265px;
+            margin-top: 210px;
+            width: 322px;
+            height: 394px;
+            position: absolute;
+        }
+
+
+        .btnBox{
+            margin-top: 228px ;
+            margin-left:800px ;
+            position: absolute;
+            width: 250px;
+            height: 400px;
+        }
+
+        button{
+            display: block;
+            width: 240px;
+            height: 49px;
+        }
+
+        #xiaoxin{
+            margin-top: 100px;
+            width: 230px;
+            height: 44px;
+            padding-left: 10px;
+            padding-top: 5px;
+
+            font-size: 30px;
+        }
+
+        #bawei{
+            margin-top: 150px;
+            width: 230px;
+            height: 44px;
+            padding-left: 10px;
+            padding-top: 5px;
+
+            font-size: 30px
+        }
+
+        .click{
+           background-image:url(img/btn-blue.png);
+            color: darkblue;
+
+        }
+        .click2{
+            background-image:url(img/btn-gray.png);
+            color:#9acfea;
+
+        }
+
+    </style>
+</head>
+
+<body background="img/xx-bg.png">
+
+<div>
+    <img src="img/xx.jpg" class="imgBoxXiao" id="img">
+</div>
+
+<div class="btnBox">
+
+    <div id="xiaoxin" class="click"> 新之助</div>
+    <div id="bawei" class="click2">巴卫</div>
+
+</div>
+
+</body>
+
+<script>
+    var btn1=document.getElementById("xiaoxin");
+    var btn2=document.getElementById("bawei");
+    var img=document.getElementById("img");
+
+
+    btn1.onclick=function(){
+        btn1.setAttribute("class","click");
+        btn2.setAttribute("class","click2");
+
+        document.body.style.background = "url(img/xx-bg.png)";
+
+        img.setAttribute("src","img/xx.jpg");
+        img.setAttribute("class","imgBoxXiao");
+
+    }
+    btn2.onclick=function(){
+        btn2.setAttribute("class","click");
+        btn1.setAttribute("class","click2");
+
+        document.body.style.background = "url(img/bw-bg.png)";
+        img.setAttribute("src","img/bw.png");
+        img.setAttribute("class","imgBoxBa");
+
+    }
+
+</script>
+</html>
